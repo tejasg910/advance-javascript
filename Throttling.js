@@ -12,4 +12,4 @@ function Throt(fun, time) {
   };
 }
 const calling = Throt(callBack, 5000);
-//ths is sd
+// fjlsdjflsd
