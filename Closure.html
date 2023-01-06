@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //what is closure ?
+        // A function with lexical scope called as closure 
+        // what is lexical scoping 
+        //The outer value can be accessed at inner scope but inner value can not be accessed at outer scope called as lexical scoping 
+
+        function getData() {
+
+            let a = 100;
+
+            const res = function () {
+
+
+                a++
+                return a;
+
+
+            }
+
+            a = 322;
+            return res;  //the scope of the function will be remembered in the closure 
+
+
+        }
+        const inner = getData();
+        console.log(inner())
+        console.log(inner())
+        console.log(inner())
+        console.log(inner())
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

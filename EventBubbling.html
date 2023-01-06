@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //What is event 
+        //So event is an action in the dom where we want to change using javascript
+        //There are predefined methods to perform the event in the javascript
+        // onclick, onmousedown, onmouseenter, onfocus
+        //What is event bubbling ?
+        //So Event bubbling means checking the same event action to the parent if the child has been executed
+        //The flow from the child to the parent
+        //remember event bubbling only applies for the same event  
+        function outerDiv() {
+            event.stopPropagation()
+            console.log('outer div called')
+        }
+        function middleDiv() {
+            event.stopPropagation()
+            console.log('middle div called')
+
+        }
+        function innerDiv() {
+            event.stopPropagation()
+            console.log('inner div called')
+
+        }
+    </script>
+    <style>
+        .outerDiv {
+            background-color: red;
+            padding: 10px;
+        }
+
+        .middleDiv {
+            background-color: yellow;
+            padding: 10px;
+        }
+
+        .innerDiv {
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>
+            This is heading
+        </h2>
+        <div onclick="outerDiv()" class="outerDiv">
+            outer div
+            <div onclick="middleDiv()" class="middleDiv">
+                Middile div
+                <div onclick="innerDiv()" class="innerDiv">
+                    Inner div
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

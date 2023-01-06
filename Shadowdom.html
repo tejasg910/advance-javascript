@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h2>This is shadow DOM tutorial </h2>
+    <cust-element data="this is new data"></cust-element>
+    <script>
+        customElements.define('cust-element',
+            class extends HTMLElement {
+                connectedCallback() {
+                    const temp = this.attachShadow({ mode: "open" })
+                    temp.innerHTML = `<button>${this.getAttribute("data")}this is button</button>`
+                }
+            }
+        )
+    </script>
+</body>
+
+</html>
