@@ -17,4 +17,3 @@ const calling = Throt(callBack, 5000);
 function gettingName(userName) {
   return userName;
 }
-const userName = gettingName("tejas");
