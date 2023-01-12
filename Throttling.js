@@ -12,3 +12,15 @@ function Throt(fun, time) {
   };
 }
 const calling = Throt(callBack, 5000);
+<<<<<<< HEAD
+=======
+// fjlsdjflsd
+
+function gettingName(userName) {
+
+  return userName;
+
+}
+
+const userName = gettingName("tejas")
+>>>>>>> fb4d6c7621ae91230e2798312865e291f133ae40
