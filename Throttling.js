@@ -12,12 +12,3 @@ function Throt(fun, time) {
   };
 }
 const calling = Throt(callBack, 5000);
-// fjlsdjflsd
-
-function gettingName(userName) {
-  return userName;
-}
-
-const userName = gettingName("tejas");
-
-function getDetails() {}
